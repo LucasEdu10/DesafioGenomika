@@ -1,66 +1,48 @@
 from collections import defaultdict
 
-#def ordenar():
+# Primeiro, vamos transferir o dado na imagem da Figura 1 (Grafo de dependência entre módulos)
+# em, de fato, um grafo de dependência entre módulos. Nesse grafo, cada nó representará
+# um módulo, e cada relação representará as dependências do módulo correspondente.
 
-V = ['v0', 'v1', 'v2', 'v3', 'v4', 'v5', 'v6', 'v7']
+modulos = {
+    '0': [],
+    '1': [],
+    '2': ['1'],
+    '3': ['0'],
+    '4': [],
+    '5': ['3'],
+    '6': ['2', '4', '5'],
+    '7': ['5', '6'],
+}
 
-#D = [('v0','v03'), ('v1','v2'), ('v3','v5'), ('v5','v6'), ('v5','v7'), ('v6', 'v7'), ('v4','v6'), ('v2', 'v6')]
+# Para fazer o carregamento dos módulos na ordem correta, devemos carregar primeiro
+# os módulos sem dependências e, uma vez que esses sejam carregados, carregar os
+# módulos dependentes desses primeiros, e assim seguir recursivamente até que todos
+# os módulos sejam carregados.
 
+# Como esse relacionamento de dependência está descrito como um grafo, podemos implementar
+# esse requisito percorrendo esse grafo como se estivéssemos fazendo uma busca em profundidade
+# no mesmo.
 
-grafo = {'v0' : ['v3'],
-		 'v1' : ['v2'],
-		 'v2' : ['v6'],
-		 'v3' : ['v0'],
-		 'v4' : ['v6'],
-		 'v5' : ['v6', 'v7'],
-		 'v6' : ['v7'],
-		 'v7' : [],
-		 }
-
-modulo_1 = ('v0','v3')
-modulo_2 = ('v1','v2')
-modulo_3 = ('v3','v5')
-modulo_4 = ('v5','v6')
-modulo_5 = ('v5','v7')
-modulo_6 = ('v6','v7')
-modulo_7 = ('v4','v6')
-modulo_8 = ('v2','v6')
-
-'''print(min(V))
-print(max(V))
-print(V)'''
-
-'''def pega_todos_da_lista():
-
-	V = pega_todos_da_lista()
-
-	for conteudo in V:
-		print(conteudo)
-
-iguais = modulo_1 in modulo_3
-
-print(iguais)'''
-def get_arestas(self):
-        """ Retorna a lista de arestas do grafo. """
-        return [(k, v) for k in self.adj.keys() for v in self.adj[k]]
-
-print(grafo.get_arestas())
-
-def caminho_certo():
-
-	for i in grafo:
-		#print(V)
-		if grafo and modulo_1:
-			#print("Há coisas iguais")
-			print(grafo)
-
-print(caminho_certo())
-
-'''if modulo_1 and modulo_3:
-	print("Tem objetos iguais")
-
-else:
-	print("Não tem objetos iguais")'''
+# Dica: pesquisar e entender como funciona as buscas por profundidade e largura
+# sem preocupar mais com o conceito do que com a matemática e implementação por trás disso.
+# Tu pode dizer que fez se baseando nessa explicação: http://www.algoritmosempython.com.br/cursos/algoritmos-python/algoritmos-grafos/busca-profundidade.
 
 
-#return ordenar
+def carregar(modulos):
+
+    def carregar_recursivo(modulos, modulo):
+        modulos_carregados.append(modulo)
+        for modulo_dependente in modulos[modulo]:
+            if modulo_dependente not in modulos_carregados:
+                carregar_recursivo(modulos, modulo_dependente)
+
+    modulos_carregados = []
+    for modulo in modulos:
+        if modulo not in modulos_carregados:
+            carregar_recursivo(modulos, modulo)
+    return modulos_carregados
+
+
+modulos_carregados = carregar(modulos)
+print(modulos_carregados)
