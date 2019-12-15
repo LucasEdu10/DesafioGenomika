@@ -1,13 +1,13 @@
 from django.contrib import admin
-from DesafioGenomika.Genoma.models import Genoma
+from DesafioGenomika.genoma.models import Genoma
 
 
 admin.site.site_header = 'Genoma'
 
 class GenomaAdmin(admin.ModelAdmin):
 
-	list_display = ['name','gene']
-	change_list_template = 'admin/Genoma/change_list.html'
+	list_display = ['disease','gene']
+	#change_list_template = 'admin/genoma/change_list.html'
 	#change_list_template = 'admin/Genoma/imagen.html'
 
 	def import_gene(self, request):
@@ -18,6 +18,8 @@ class GenomaAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Genoma, GenomaAdmin)	
+admin.site.register(Genoma, GenomaAdmin)
+
+
 
 # Register your models here.
