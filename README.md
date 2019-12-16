@@ -15,7 +15,7 @@ identificar pequenos fragmentos de DNA que chamamos de reads. Após obter uma gr
 reads de múltiplas cópias do mesmo genoma, o objetivo é reconstruir o genoma a partir destes pequenos
 fragmentos de DNA. Este processo é chamado de fragment assembly.
 
-RESPOSTA:
+- RESPOSTA:
 Nesta questão me basei em um script com uma função recursiva já criado, fiz somente alguns ajustes para funcionar, aonde neste script ele faz a montagem do conteudo.
 
 1. Para rodar o script `python assembly.py` ele vai gerar outro arquivo na mesma pasta com o conteudo.
@@ -32,7 +32,7 @@ módulos indicada pelo sentido, por exemplo: 1 2, indica que o módulo 1 é uma 
 modulo 1. Implemente um algoritmo em Python ou Pseudocódigo (formato TXT) que retorne a ordem
 correta de carregamento de todos os módulos do sistema.
 
-RESPOSTA:
+- RESPOSTA:
 Nesta questão fiz um script aonde ele pega a relação de cada modulo e se organizar-se para fazer com que os modulos carregassem todos certos, a ideia era fazer com que a lista retornasse assim: ['0', '1', '2', '3', '4', '5', '6', '7']
 
 2. Para rodar o script `python3 ordenar.py`
