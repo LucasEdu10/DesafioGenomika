@@ -51,5 +51,5 @@ raras e tumores a partir de variantes genéticas encontradas na regiões do DNA 
 Nesta questão foram usadas as seguintes ferramentas: framework django e docker
 
 3. Para rodar o projeto: `docker-compose up` 
-3.1 Para rodar o script de atualização do banco:`python3 update_banco.py`, neste caso precisamos instalar a biblioteca psycopg2, para baixar ela rode o comando: `pip3 install psycopg2`
+3. Para rodar o script de atualização do banco:`python3 update_banco.py`, neste caso precisamos instalar a biblioteca psycopg2, para baixar ela rode o comando: `pip3 install psycopg2`
 
