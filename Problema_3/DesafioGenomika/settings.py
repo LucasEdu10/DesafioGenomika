@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DesafioGenomika.genoma',
-    'DesafioGenomika.search'
+    'DesafioGenomika.genoma'
 ]
 
 MIDDLEWARE = [
@@ -57,7 +56,8 @@ ROOT_URLCONF = 'DesafioGenomika.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
+        'DIRS': [],
+        #'DIRS': [os.path.join(BASE_DIR, 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,6 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Genomika',
+}
 
 
 # Internationalization
@@ -128,3 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
