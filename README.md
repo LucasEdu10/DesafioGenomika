@@ -1,7 +1,7 @@
 # Desafio Genomika
 	- Repositório criado para o Desafio de conhecimentos do estagio de desenvolvimento
 
-##Problema (1)
+#Problema (1)
 
 	- Todos os seres humanos compartilham aproximadamente 99,9% dos mesmos nucleotídeos
 	em seu genoma e até a mesma ordem como são apresentados. Portanto, se apenas soubermos alguns
@@ -18,10 +18,10 @@
 	- RESPOSTA:
 		 Nesta questão me basei em um script com uma função recursiva já criado, fiz somente alguns ajustes para funcionar, aonde neste script ele faz a montagem do conteudo.
 
-1 - Para rodar o script `python assembly.py` ele vai gerar outro arquivo na mesma pasta com o conteudo.
+	1 - Para rodar o script `python assembly.py` ele vai gerar outro arquivo na mesma pasta com o conteudo.
 
 
-##Problema (2)
+#Problema (2)
 
 	- Nosso problema 2 continua focando em algoritmos, especialmente trabalhamos com
 	busca em vários sistemas para captura de dados e processamento para tomada de decisão. Queremos
@@ -34,9 +34,11 @@
 
 	- RESPOSTA:
 		Nesta questão fiz um script aonde ele pega a relação de cada modulo e se organizar-se para fazer com que os modulos carregassem todos certos, a ideia era fazer com que a lista retornasse assim: ['0', '1', '2', '3', '4', '5', '6', '7']
-2 - Para rodar o script `python3 ordenar.py`
+	
+	2 - Para rodar o script `python3 ordenar.py`
 
-##Problema (3)
+#Problema (3)
+
 	-	O segundo problema envolve o desenvolvimento de uma aplicação web com
 	HTML/CSS/JavaScript + backend usando python + banco de dados à sua escolha.
 	O aplicativo é uma ferramenta on-line de sugestão de genes a serem analisados dado uma ou mais
@@ -50,8 +52,8 @@
 			framework django
 			docker
 
-3 - Para rodar o projeto:
+	3 - Para rodar o projeto:
 		`docker-compose up` 
-3.1 - Para rodar o script de atualização do banco:
-		`python3 update_banco.py`, neste caso precisamos instalar a biblioteca psycopg2, para baixar ela rode o comando: `pip3 install psycopg2`
+		3.1 - Para rodar o script de atualização do banco:
+			`python3 update_banco.py`, neste caso precisamos instalar a biblioteca psycopg2, para baixar ela rode o comando: `pip3 install psycopg2`
 
