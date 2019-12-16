@@ -1,4 +1,3 @@
-from collections import defaultdict
 
 # Primeiro, vamos transferir o dado na imagem da Figura 1 (Grafo de dependência entre módulos)
 # em, de fato, um grafo de dependência entre módulos. Nesse grafo, cada nó representará
@@ -23,11 +22,6 @@ modulos = {
 # Como esse relacionamento de dependência está descrito como um grafo, podemos implementar
 # esse requisito percorrendo esse grafo como se estivéssemos fazendo uma busca em profundidade
 # no mesmo.
-
-# Dica: pesquisar e entender como funciona as buscas por profundidade e largura
-# sem preocupar mais com o conceito do que com a matemática e implementação por trás disso.
-# Tu pode dizer que fez se baseando nessa explicação: http://www.algoritmosempython.com.br/cursos/algoritmos-python/algoritmos-grafos/busca-profundidade.
-
 
 def carregar(modulos):
 

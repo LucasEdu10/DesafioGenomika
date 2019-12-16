@@ -1,7 +1,4 @@
 
-#arquivo = open('/home/lucas/Projetos/DesafioGenomika/SelecaoEstagio2019/SelecaoEstagio2019/Problema1/output.txt', 'r')
-#print(arquivo.readlines())
-
 def long(reads, genoma=''):
 	if len(reads) == 0:
 		return genoma
@@ -22,15 +19,17 @@ def long(reads, genoma=''):
 				return long(reads, genoma + a[q:])
 
 if __name__ == "__main__":
- 
-	#arquivo = open("/home/augusto/Downloads/rosalind_long.txt")
-	arquivo = open('/home/lucas/Projetos/DesafioGenomika/SelecaoEstagio2019/SelecaoEstagio2019/Problema1/output.txt', 'r')
+
+	arquivo = open('/home/lucas/Projetos/DesafioGenomika/SelecaoEstagio2019/SelecaoEstagio2019/Problema1/input.txt', 'r')
 	sequencia=[]
 	i=-1
 	for linha in arquivo:
-		if linha.find('>') != -1:		
+		if linha != -1:		
 			i+=1
-			sequencia.append('')
+			sequencia.append(linha.rstrip())
 		else:		
 			sequencia[i]=sequencia[i]+linha.rstrip()
-	print long(sequencia)
+	
+	output = open('output.txt', 'w')
+	output.writelines(long(sequencia))
+	output.close()
