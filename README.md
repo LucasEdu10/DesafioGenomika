@@ -3,22 +3,22 @@
 
 ## Problema (1)
 
-	- Todos os seres humanos compartilham aproximadamente 99,9% dos mesmos nucleotídeos
-	em seu genoma e até a mesma ordem como são apresentados. Portanto, se apenas soubermos alguns
-	genomas completos de uma espécie podemos ter os principais componentes para identificar o genoma
-	de toda a espécie.
-	Determinar o genoma completo de um organismo (chamado de sequenciamento de genoma) é uma ds
-	principais tarefas em bioinformática. Infelizmente, nós não possuímos tecnologia microscópica que
-	consiga realizar um zoom a nível de nucleotídeo e determinar a sequência de nucleotídeos de um
-	genoma, um por vez. Entretanto, pesquisadores podem aplicar metódos bioquímicos para gerar e
-	identificar pequenos fragmentos de DNA que chamamos de reads. Após obter uma grande coleção de
-	reads de múltiplas cópias do mesmo genoma, o objetivo é reconstruir o genoma a partir destes pequenos
-	fragmentos de DNA. Este processo é chamado de fragment assembly.
+Todos os seres humanos compartilham aproximadamente 99,9% dos mesmos nucleotídeos
+em seu genoma e até a mesma ordem como são apresentados. Portanto, se apenas soubermos alguns
+genomas completos de uma espécie podemos ter os principais componentes para identificar o genoma
+de toda a espécie.
+Determinar o genoma completo de um organismo (chamado de sequenciamento de genoma) é uma ds
+principais tarefas em bioinformática. Infelizmente, nós não possuímos tecnologia microscópica que
+consiga realizar um zoom a nível de nucleotídeo e determinar a sequência de nucleotídeos de um
+genoma, um por vez. Entretanto, pesquisadores podem aplicar metódos bioquímicos para gerar e
+identificar pequenos fragmentos de DNA que chamamos de reads. Após obter uma grande coleção de
+reads de múltiplas cópias do mesmo genoma, o objetivo é reconstruir o genoma a partir destes pequenos
+fragmentos de DNA. Este processo é chamado de fragment assembly.
 
-	- RESPOSTA:
-		 Nesta questão me basei em um script com uma função recursiva já criado, fiz somente alguns ajustes para funcionar, aonde neste script ele faz a montagem do conteudo.
+RESPOSTA:
+Nesta questão me basei em um script com uma função recursiva já criado, fiz somente alguns ajustes para funcionar, aonde neste script ele faz a montagem do conteudo.
 
-	1 - Para rodar o script `python assembly.py` ele vai gerar outro arquivo na mesma pasta com o conteudo.
+1. Para rodar o script `python assembly.py` ele vai gerar outro arquivo na mesma pasta com o conteudo.
 
 
 ## Problema (2)
